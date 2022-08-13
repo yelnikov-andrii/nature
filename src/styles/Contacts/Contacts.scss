@@ -1,0 +1,136 @@
+.contacts {
+  padding: 96px 0 88px;
+  background-color: $header_bg_color;
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    color: $txt_color;
+
+    @include onSmallScreen {
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: flex-start;
+    }
+
+    @media (min-width: 425px) and (max-width: 768px) {
+      justify-content: space-between;
+    }
+
+    &_contacts {
+
+      @include onSmallScreen {
+        width: 100%;
+      }
+
+      @media (min-width: 425px) and (max-width: 768px) {
+        justify-content: space-between;
+        width: auto;
+      }
+
+      &-title {
+        font-weight: 700;
+        font-size: 34px;
+        line-height: 48px;
+        align-items: center;
+        text-transform: uppercase;
+        margin: 0 0 32px 0;
+      }
+
+      &-description {
+        font-size: 13px;
+        line-height: 24px;
+        letter-spacing: 0.3px;
+        margin: 0;
+
+        @include onSmallScreen {
+          br {
+            display: none;
+          }
+          span {
+            margin-left: 4px;
+          }
+        }
+      }
+    }
+
+    &_headquarters {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+
+      &-br {
+        display: none;
+
+        @include onSmallScreen {
+          display: block;
+        }
+      }
+
+      &-title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: 0.3px;
+        margin: 0 0 37px 0;
+      }
+
+      &-link {
+        font-size: 13px;
+        line-height: 24px;
+        letter-spacing: 0.3px;
+        color: $txt_color;
+        text-decoration: none;
+      }
+    }
+
+    &_social-media {
+
+      &-item {
+        &:hover {
+          &:nth-child(1) {
+            svg {
+              path {
+                fill: #08c6eb;
+              }
+            }
+          }
+
+          &:nth-child(2) {
+            svg {
+              path {
+                fill: #2060f6;;
+              }
+            }
+          }
+
+          &:nth-child(3) {
+            svg {
+              path {
+                fill: #0e76a8;
+              }
+            }
+          }
+        }
+      }
+
+      &-title {
+        margin: 0 0 37px 0;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: 0.3px;
+      }
+
+      &-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 16px;
+      }
+    }
+  }
+}

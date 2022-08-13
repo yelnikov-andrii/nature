@@ -1,0 +1,303 @@
+.get-started {
+  padding: 90px 0 190px;
+
+  &__form-and-text {
+    display: flex;
+    justify-content: space-between;
+    background: #FFBD9E;
+    border-radius: 20px;
+    padding: 104px 104px  104px 82px;
+    margin-bottom: 192px;
+
+    @include onTablet {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include onSmallScreen {
+      flex-direction: column;
+      align-items: center;
+      padding: 42px 43px  56px 42px;
+    }
+  }
+
+  &__txt-block {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include onTablet {
+      width: 100%;
+      margin-bottom: 55px;
+      text-align: center; 
+    }
+
+    @include onSmallScreen {
+      width: 100%;
+      margin-bottom: 55px;
+      text-align: center; 
+    }
+
+    &_title {
+      font-weight: 700;
+    font-size: 40px;
+    line-height: 56px;
+    text-transform: capitalize;
+    color: $txt-color-second;
+    margin: 0 0 40px 0;
+
+    @include onSmallScreen {
+      font-size: 28px;
+      line-height: 42px;
+    }
+
+    }
+
+    &_description {
+      font-size: 18px;
+      line-height: 32px;
+      color: $arrow_bg;
+      opacity: 0.9;
+      margin: 0;
+
+      @include onSmallScreen {
+        font-size: 15px;
+        line-height: 175%;
+      }
+    }
+  }
+
+  &__form-block {
+    width: 422px;
+    height: 352px;
+    background: #F7F3F4;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 55px;
+    position: relative;
+
+    @include onSmallScreen {
+      width: 100%;
+      padding: 40px 24px;
+    }
+
+    &:hover {
+      &::before {
+        transform: scale(1.2) rotate(-36deg);
+        transition: all 0.4s ease;
+      }
+    }
+
+  &::before {
+    position: absolute;
+    content: '';
+    background-image: url(../../images/leaves.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: -40px;
+    right: -40px;
+    width: 100px;
+    height: 130px;
+    transition: all 0.4s ease;
+
+    @include onSmallScreen {
+      width: 100px;
+      height: 120px;
+      right: 0;
+    }
+  }
+
+    &_title {
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 56px;
+      text-transform: capitalize;
+      color: $txt-color-second;
+      margin: 0 0 24px 0;
+
+      @include onSmallScreen {
+        font-size: 24px;
+        line-height: 32px;
+      }
+    }
+  }
+
+  &__questions {
+    display: flex;
+    justify-content: space-between;
+
+    @include onTablet {
+      flex-direction: column;
+    }
+
+    @include onSmallScreen {
+      flex-direction: column;
+    }
+
+    &-block {
+      width: 45%;
+
+      @include onTablet {
+        width: 100%;
+        text-align: center;
+      }
+  
+      @include onSmallScreen {
+        width: 100%;
+      }
+
+      &_item {
+        margin-bottom: 35px;
+        border-bottom: 1px solid rgba(30, 26, 32, 0.2);
+        max-height: 70px;
+        transition: all 0.4s ease;
+
+        @include onSmallScreen {
+          margin-bottom: 50px;
+        }
+
+        &--opened {
+          max-height: 200px;
+
+          @include onSmallScreen {
+            max-height: 300px;
+          }
+        }
+      }
+
+      &_question {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 34px;
+        color: $arrow_bg;
+        opacity: 0.9;
+        margin: 0 0 16px 0;
+        position: relative;
+
+        @include onSmallScreen {
+          font-size: 18px;
+          line-height: 28px;
+          width: 90%;
+        }
+
+      &.get-started__questions-block_question--opened {
+          &::before {
+            content: '-';
+          }
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &::before {
+          position: absolute;
+          width: 40px;
+          height: 40px;
+          content: '+';
+          border-radius: 50%;
+          background: $button_color;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #fff;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+
+          @include onSmallScreen {
+            right: -40px;
+          }
+        }
+      }
+
+      &_answer {
+        font-size: 16px;
+        line-height: 24px;
+        color: $arrow_bg;
+        opacity: 0.9;
+        transition: 0.4s all ease;
+        transform: scaleY(0);
+        transform-origin: top;
+        padding-bottom: 32px;
+        margin: 0;
+
+        @include onTablet {
+          width: 70%;
+          text-align: center;
+          margin: 0 auto;
+        }
+
+        &--opened {
+          transform: scaleY(1);
+        }
+      }
+    }
+  }
+
+  &__contact-block {
+    width: 45%;
+
+    @include onTablet {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    @include onSmallScreen {
+      width: 100%;
+      margin-bottom: 48px;
+    }
+
+    &_title {
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 56px;
+      text-transform: capitalize;
+      color: $txt-color-second;
+      margin: 0 0 40px 0;
+
+      @include onSmallScreen {
+        font-size: 28px;
+        line-height: 150%;
+      }
+    }
+
+    &_description {
+      font-size: 18px;
+      line-height: 32px;
+      color: $arrow_bg;
+      opacity: 0.9;
+      margin: 0 0 56px 0;
+
+      @include onSmallScreen {
+        font-size: 15px;
+        line-height: 175%;
+      }
+    }
+
+    &_button {
+      width: 166px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 48px;
+      background: $button_color;
+      border-radius: 30px;
+      color: #fff;
+      text-transform: uppercase;
+      border: none;
+      outline: none;
+      text-decoration: none;
+      transition: $transition;
+      transform-origin: left;
+
+      &:hover {
+        transform: scaleX(1.1);
+      }
+    }
+  }
+}

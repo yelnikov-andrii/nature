@@ -1,0 +1,258 @@
+@import '../vars.scss';
+
+.header {
+  background-color: $header_bg_color;
+  padding: 32px 0 80px;
+  color: $header_txt_color;
+
+  &__list {
+    &-opener {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 22px;
+      height: 17px;
+      box-sizing: border-box;
+      position: relative;
+      z-index: 1;
+      
+      @media (min-width: 768px) {
+        display: none;
+      }
+
+      &.header__list-opener--opened {
+
+        .header__list-opener_item {
+          &:nth-child(1) {
+            transform: rotate(45deg);
+            transform-origin: left;
+          }
+
+          &:nth-child(2) {
+            display: none;
+          }
+
+          &:nth-child(3) {
+            transform: rotate(-45deg) translateY(50%);
+            transform-origin: left;
+          }
+        }
+
+      }
+
+      &_item {
+        width: 100%;
+        height: 3px;
+        background-color: $header_txt_color;
+        border-radius: 5px;
+
+        &:nth-child(2) {
+          width: 17px;
+        }
+      }
+
+        &:hover {
+          cursor: pointer;
+        }
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid #000;
+    padding-bottom: 38px;
+    margin-bottom: 70px;
+
+    @include onSmallScreen {
+      padding-bottom: 28px;
+    }
+  }
+
+  &__logo {
+    cursor: pointer;
+    transition: all 0.4s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+
+    &-txt {
+      font-size: 28px;
+      color: $header_txt_color;
+      font-weight: 700;
+    }
+
+    &-img {
+      transition: all 0.4s ease;
+    }
+
+    &:hover {
+      transform: scale(1.2);
+
+      .header__logo-img {
+          transform: rotate(-37deg);
+      }
+    }
+  }
+
+  &__button {
+    width: 145px;
+    height: 48px;
+    background: #FFFFFF;
+    box-shadow: 0px 30px 40px rgba(240, 101, 126, 0.05);
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    transition: all 0.4s ease;
+
+    @include onSmallScreen {
+      display: none;
+    }
+
+    &:hover {
+      text-shadow: 0 0 .65px #000, 0 0 .65px #000;
+      cursor: pointer;
+      transform: scale(1.2);
+    }
+  }
+
+  &__mobile-menu {
+    margin-top: 72px;
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+
+    &--opened {
+      transform: translateX(0);
+    }
+  }
+
+  &__main {
+    display: flex;
+    justify-content: space-around;
+
+    @include onSmallScreen {
+      flex-direction: column;
+    }
+
+    &-info-block {
+
+      @include onTablet {
+        width: 40%;
+      }
+
+      @include onSmallScreen {
+        width: 100%;
+      }
+
+      &_image {
+        width: 100%;
+        margin-bottom: 60px;
+        font-size: 16px;
+        line-height: 32px;
+
+        @include onTablet {
+          width: 100%;
+        }
+      }
+
+      &_txt {
+        font-size: 16px;
+        line-height: 32px;
+        width: 448px;
+        margin: 0 0 48px 0;
+
+        @include onTablet {
+          width: 100%;
+        }
+
+        @include onSmallScreen {
+          width: 100%;
+        }
+      }
+
+      &_form {
+        width: 448px;
+
+        @include onTablet {
+          width: 100%;
+        }
+
+        @include onSmallScreen {
+          width: 100%;
+          margin-bottom: 50px;
+        }
+      }
+    }
+
+    &-image-block {
+      width: 472px;
+      position: relative;
+
+      &_title {
+        position: absolute;
+        top: 75%;
+        left: 7%;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 140%;
+        text-transform: capitalize;
+        color: #FFFFFF;
+        margin: 0;
+
+        @include onTablet {
+          top: 60%;
+          left: 3%;
+        }
+      }
+
+      &_quantity {
+        position: absolute;
+        top: 80%;
+        left: 7%;
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 80px;
+        color: #FFFFFF;
+        margin: 0;
+
+        @include onTablet {
+          font-size: 45px;
+          top: 65%;
+          left: 3%;
+        }
+
+        @include onSmallScreen {
+          font-size: 40px;
+        }
+      }
+
+      &_img {
+        width: 100%;
+      }
+
+      @include onTablet {
+        width: 40%;
+      }
+
+      @include onSmallScreen {
+        width: 100%;
+      }
+    }
+  }
+}

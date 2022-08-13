@@ -1,0 +1,197 @@
+.slider-block {
+  width: 1168px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  position: relative;
+
+  @media (max-width: 1168px) {
+    width: 768px;
+    gap: 20px;
+  }
+
+  @include onSmallScreen {
+    width: 320px;
+  }
+
+  &__window {
+    width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+
+    @include onSmallScreen {
+      height: 600px;
+    }
+  }
+
+  &__items-container {
+    display: flex;
+    gap: 30px;
+    transition: 1s all ease;
+
+    @media (max-width: 1168px) {
+      gap: 20px;
+    }
+  }
+
+  @include onSmallScreen {
+    flex-direction: column;
+  }
+
+  &__arrow:first-of-type {
+    background-image: url(../../images/left_arrow.svg);
+
+    @include onSmallScreen {
+      position: absolute;
+      bottom: -10px;
+      left: 10px;
+    }
+    
+  }
+
+  &__arrow:last-of-type {
+    background-image: url(../../images/arrow_rigth.svg);
+
+    @include onSmallScreen {
+      position: absolute;
+      bottom: -10px;
+      right: 10px;
+    }
+  }
+
+  &__arrow {
+    width: 24px;
+    height: 44px;
+    border: none;
+    outline: none;
+    background: transparent;
+
+    @include onSmallScreen {
+      width: 18px;
+      height: 36px;
+      background-size: cover;
+    }
+
+    &--disabled {
+      opacity: 0.5;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__item {
+    border-radius: 20px;
+    padding: 94px 80px 80px;
+    box-sizing: border-box;
+    width: 992px;
+
+    display: flex;
+    position: relative;
+
+    @media (max-width: 1168px) {
+      width: 768px;
+    }
+
+    @include onSmallScreen {
+      padding: 20px;
+      width: 320px;
+      height: 550px;
+    }
+
+    &_txt {
+      width: 50%;
+      margin-right: 140px;
+
+      @include onSmallScreen {
+        width: 320px;
+        margin-right: 0;
+        padding: 0;
+      }
+    }
+
+    &_element {
+      width: 50%;
+
+      &-img {
+        transform: translateY(87px);
+      }
+
+      @media (max-width: 1168px) {
+        display: none;
+      }
+
+      @include onSmallScreen {
+        display: block;
+        position: absolute;
+        bottom: -7px;
+        left: 5%;
+
+        &-img {
+          width: 220px;
+          height: 220px;
+          transform: translateY(0);
+        }
+      }
+    }
+    
+    &-title {
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 56px;
+      text-transform: capitalize;
+      color: $txt-color-second;
+      margin: 0 0 42px;
+      width: 380px;
+
+      @include onSmallScreen {
+        width: 100%;
+        font-size: 28px;
+        line-height: 120%;
+      }
+    }
+
+    &-description {
+      font-size: 18px;
+      line-height: 32px;
+      color: $arrow_bg;
+      opacity: 0.9;
+      width: 380px;
+
+      @include onSmallScreen {
+        width: 100%;
+        font-size: 15px;
+        line-height: 125%;
+      }
+    }
+  }
+
+  &__points {
+    display: none;
+
+    &_item {
+      display: block;
+      width: 11px;
+      height: 11px;
+      background-color: #fff;
+      border-radius: 50%;
+      border: 1px solid #000;
+      box-sizing: border-box;
+
+      &--active {
+        background-color: #000;
+      }
+    }
+
+    @include onSmallScreen {
+      display: flex;
+      align-self: center;
+      gap: 5px;
+      width: 40px;
+      height: 15px;
+      margin: 10px auto;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@import '../vars.scss';
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+
+  @include onSmallScreen {
+    display: none;
+  }
+
+  @include onTablet {
+    display: flex;
+  }
+
+  &__item {
+    margin-right: 102px;
+
+    @include onTablet {
+      margin-right: 52px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $header_txt_color;
+    opacity: 0.8;
+    font-size: 16px;
+    line-height: 32px;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 1;
+      text-shadow: 0 0 .65px #000, 0 0 .65px #000;
+    }
+  }
+}

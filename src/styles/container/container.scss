@@ -1,0 +1,12 @@
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @media (max-width: 320px) {
+    width: 100%;
+  }
+
+@include onDesktop {
+  max-width: 1250px;
+}
+}

@@ -1,0 +1,65 @@
+.header-form {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    background-image: url(../../images/geolocation.svg);
+    content: '';
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 20px;
+  }
+
+  &__input {
+    background: #FFFFFF;
+    box-shadow: 0px 30px 40px rgba(240, 101, 126, 0.05);
+    border-radius: 40px;
+    outline: none;
+    border: none;
+    height: 64px;
+    width: 100%;
+    padding: 20px 48px;
+    box-sizing: border-box;
+
+    &::placeholder {
+      color: $header_form_placeholder_color;
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+
+  &__btn {
+    width: 122px;
+    height: 48px;
+    background: $button_color;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    transition: all 0.4s ease;
+
+    @include onTablet {
+      width: 25%;
+    }
+
+    @include onSmallScreen {
+      width: 25%;
+    }
+
+    &:hover {
+      cursor: pointer;
+      transform: translateY(-50%) scaleX(1.1);
+      transform-origin: right;
+    }
+  }
+}

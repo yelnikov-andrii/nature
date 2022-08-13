@@ -1,0 +1,39 @@
+.places {
+  padding: 64px 0 100px;
+  background-color: #fff;
+
+  &__top-block {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 192px;
+
+    @include onTablet {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include onSmallScreen {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 102px;
+    }
+
+    &_item {
+      width: 30%;
+      display: flex;
+      gap: 24px;
+
+      @include onTablet {
+        margin-bottom: 50px;
+        justify-content: space-between;
+        width: inherit;
+      }
+
+      @include onSmallScreen {
+        margin-bottom: 50px;
+        justify-content: space-between;
+        width: inherit;
+      }
+    }
+  }
+}

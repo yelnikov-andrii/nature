@@ -1,0 +1,70 @@
+.block-icons {
+ 
+  @include onTablet {
+    width: 60%;
+  }
+
+  &__picture-block {
+    width: 100%;
+    display: flex;
+
+
+    @include onTablet {
+      width: 200px;
+    }
+
+    @include onSmallScreen {
+      width: 150px;
+    }
+  }
+
+  &__txt-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: $txt_color;
+
+    @include onTablet {
+      width: 250px;
+    }
+
+    @include onSmallScreen {
+      width: 160px;
+    }
+
+    &_title {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 16px;
+      margin: 0 0 8px 0;
+    }
+
+    &_description {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 18px;
+      margin: 0 0 20px 0;
+    }
+
+    &_link {
+      font-size: 12px;
+      line-height: 16px;
+      text-decoration-line: underline;
+      color: $link-color;
+      width: fit-content;
+
+      &:hover {
+        color: $button_color;
+      }
+    }
+  }
+}
+
+iframe {
+  width: 173px;
+  height: 112px;
+
+  @include onSmallScreen {
+    width: 109px;
+  }
+}

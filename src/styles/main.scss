@@ -1,0 +1,33 @@
+@import './vars.scss';
+@import './mixins.scss';
+@import './Header/header.scss';
+@import './Header/list.scss';
+@import './Header/menu.scss';
+@import './Header/header-form.scss';
+@import './container/container.scss';
+@import './Places/places.scss';
+@import './Places/block-icons.scss';
+@import './Places/slider-block.scss';
+@import './OurTeam/ourTeam.scss';
+@import './OurTeam/team-main-block.scss';
+@import './GetStarted/getsStarted.scss';
+@import './GetStarted/form.scss';
+@import './SaveTheWorld/save-the-world.scss';
+@import './SaveTheWorld/save-world-slider.scss';
+@import './Contacts/Contacts.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+.body {
+  margin: 0;
+  font-weight: 400;
+  scroll-behavior: smooth;
+}
+
+.main {
+  font-family: 'Poppins', sans-serif;
+}
