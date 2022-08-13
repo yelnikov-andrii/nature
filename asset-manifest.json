@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/nature/static/css/main.c1032371.css",
+    "main.js": "/nature/static/js/main.a938990b.js",
+    "static/media/bg_our_team.png": "/nature/static/media/bg_our_team.8a8a63b1d9e282bd3c0e.png",
+    "static/media/person3.png": "/nature/static/media/person3.f86eff6b6dfc1d1627ea.png",
+    "static/media/saveWorld_3.png": "/nature/static/media/saveWorld_3.5f3263b55714065609f6.png",
+    "static/media/saveWorld_2.png": "/nature/static/media/saveWorld_2.9b719d5ea0b055adff20.png",
+    "static/media/person1.png": "/nature/static/media/person1.eb77c265cfca5e56fec3.png",
+    "static/media/person2.png": "/nature/static/media/person2.5e4e013f48ea79cf0f08.png",
+    "static/media/bg_small_screen.png": "/nature/static/media/bg_small_screen.2b5eedb695ca41637efd.png",
+    "static/media/saveWorld_1.png": "/nature/static/media/saveWorld_1.6673935c4274eaa9bb81.png",
+    "static/media/saveWorld_5.png": "/nature/static/media/saveWorld_5.11066ae9707472e596f3.png",
+    "static/media/Parrot.png": "/nature/static/media/Parrot.ca3714b20356244b699b.png",
+    "static/media/saveWorld_4.png": "/nature/static/media/saveWorld_4.695def0a459125c23756.png",
+    "static/media/natureNeedsYou.png": "/nature/static/media/natureNeedsYou.b330c98743d52eb94895.png",
+    "static/media/places_top_block_img_3.png": "/nature/static/media/places_top_block_img_3.01084d9b1240c9123d5c.png",
+    "static/media/places_top_block_img_1.png": "/nature/static/media/places_top_block_img_1.d98427293e08fb156af3.png",
+    "static/media/slide-transparent-bg.png": "/nature/static/media/slide-transparent-bg.c73028f86994a269f6ee.png",
+    "static/media/Logo.svg": "/nature/static/media/Logo.eaff9030d23724006423fe50ea6d5967.svg",
+    "index.html": "/nature/index.html",
+    "static/media/line.svg": "/nature/static/media/line.02b911983d87b2c74719.svg",
+    "static/media/arrow_rigth.svg": "/nature/static/media/arrow_rigth.99c98265ae3f0dfe8893.svg",
+    "static/media/left_arrow.svg": "/nature/static/media/left_arrow.b2eae74e4508489e5315.svg",
+    "static/media/geolocation.svg": "/nature/static/media/geolocation.fc131d571c5d4c2a1ac8.svg",
+    "main.c1032371.css.map": "/nature/static/css/main.c1032371.css.map",
+    "main.a938990b.js.map": "/nature/static/js/main.a938990b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c1032371.css",
+    "static/js/main.a938990b.js"
+  ]
+}
