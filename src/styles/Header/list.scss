@@ -17,6 +17,9 @@
 
   &__item {
     margin-right: 102px;
+    position: relative;
+    overflow: hidden;
+    
 
     @include onTablet {
       margin-right: 52px;
@@ -29,15 +32,40 @@
 
   &__link {
     text-decoration: none;
-    color: $header_txt_color;
-    opacity: 0.8;
+    color: transparent;
     font-size: 16px;
     line-height: 32px;
 
+    &:before {
+      content: attr(data-name);
+      transform: translate3d(0, 0, 0);
+      width: fit-content;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: all 0.4s ease;
+      color: $header_txt_color;
+    }
+
+    &:after {
+      content: attr(data-name);
+      width: fit-content;
+      position: absolute;
+      transform: translate3d(0, 100%, 0);
+      top: 0;
+      left: 0;
+      color: $button_color;
+      transition: all 0.4s ease;
+    }
+
     &:hover {
-      cursor: pointer;
-      opacity: 1;
-      text-shadow: 0 0 .65px #000, 0 0 .65px #000;
+      &:before {
+        transform: translate3d(0, 100%, 0);
+      }
+  
+      &:after {
+        transform: translate3d(0, 0, 0);
+      }
     }
   }
 }

@@ -8,6 +8,28 @@ export const Header: React.FC = () => {
   const [menuOpenerActive, setMenuOpenerActive] = useState(false);
   const [members, setMembers] = useState(29128);
   const [findPlace, setFindPlace] = useState('');
+  const listItems = [
+    {
+      id: 0,
+      title: 'Home',
+      link: 'home'
+    },
+    {
+      id: 1,
+      title: 'Our mission',
+      link: 'mission'
+    },
+    {
+      id: 2,
+      title: 'Places',
+      link: 'places'
+    },
+    {
+      id: 3,
+      title: 'Team',
+      link: 'team'
+    },
+  ]
 
   const toFind = (input: string) => {
     setFindPlace(input);
@@ -47,9 +69,23 @@ export const Header: React.FC = () => {
             </a>
 
           <ul className='header__list list'>
-            <li className='list__item'>
+            {listItems.map(item => (
+              <li 
+                className='list__item'
+                key={item.id}>
+                <a 
+                href={`#${item.link}`}
+                data-name={item.title}
+                className='list__link'
+              >
+                {item.title}
+              </a>
+              </li>
+            ))}
+            {/* <li className='list__item'>
               <a 
                 href='#home'
+                data-name='Home'
                 className='list__link'
               >
                 Home
@@ -81,7 +117,7 @@ export const Header: React.FC = () => {
               >
                 Team
               </a>
-            </li>
+            </li> */}
           </ul>
 
           <a className='header__button' href='#apply'>
