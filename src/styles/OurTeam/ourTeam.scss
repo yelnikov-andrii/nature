@@ -46,15 +46,16 @@
       z-index: 4;
       display: flex;
       justify-content: flex-start;
-      transition: all 0.4s ease;
-
-      &:hover {
-        transform: scale(1.05);
-      }
 
       &-img {
         position: relative;
         z-index: 3;
+        transition: all 0.4s ease;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+
         @media (max-width: 1110px) {
           width: 100%;
         }
@@ -69,19 +70,6 @@
       transform: translateY(110px);
       position: relative;
       z-index: 3;
-
-      &:hover {
-        transform: translateY(110px) scale(1.05);
-
-        &::before {
-          transform: scale(1) rotate(7deg);
-        }
-
-        &::after {
-          transform: scale(1) rotate(-207deg);
-          
-        }
-      }
 
       @media (max-width: 1110px) {
         transform: translateY(0);
