@@ -82,42 +82,6 @@ export const Header: React.FC = () => {
               </a>
               </li>
             ))}
-            {/* <li className='list__item'>
-              <a 
-                href='#home'
-                data-name='Home'
-                className='list__link'
-              >
-                Home
-              </a>
-            </li>
-
-            <li className='list__item'>
-              <a 
-                href='#mission'
-                className='list__link'
-              >
-                Our mission
-              </a>
-            </li>
-
-            <li className='list__item'>
-              <a 
-                href='#places'
-                className='list__link'
-              >
-                Places
-              </a>
-            </li>
-
-            <li className='list__item'>
-              <a 
-                href='#team'
-                className='list__link'
-              >
-                Team
-              </a>
-            </li> */}
           </ul>
 
           <a className='header__button' href='#apply'>
@@ -145,31 +109,28 @@ export const Header: React.FC = () => {
           })}
           >
             <ul className="menu__list">
+              {listItems.map(item => (
+                <li className="menu__item">
+                  <a 
+                    className="menu__link"
+                    href={`#${item.link}`}
+                    onClick={() => {
+                      setMenuOpenerActive(false);
+                    }}
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
               <li className="menu__item">
-                <a href="#actual" className="menu__link">
-                  Home
-                </a>
-              </li>
-              <li className="menu__item">
-                <a href="#gallery" className="menu__link">
-                  Our mission
-                </a>
-              </li>
-              <li className="menu__item">
-                <a href="#contact" className="menu__link">
-                  Places
-                </a>
-              </li>
-
-              <li className="menu__item">
-                <a href="#contact" className="menu__link">
-                  Team
-                </a>
-              </li>
-              <li className="menu__item">
-              <button className='menu__item--button'>
+              <a className='menu__item--button'
+                  href='#contact'
+                  onClick={() => {
+                    setMenuOpenerActive(false);
+                  }}
+                >
                 Apply
-              </button>
+              </a>
               </li>
             </ul>
           </nav>

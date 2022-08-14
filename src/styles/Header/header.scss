@@ -110,16 +110,17 @@
     justify-content: center;
     align-items: center;
     color: #000;
-    transition: all 0.4s ease;
+    transition: transform 0.4s ease;
 
     @include onSmallScreen {
       display: none;
     }
 
     &:hover {
-      text-shadow: 0 0 .65px #000, 0 0 .65px #000;
+      text-shadow: 0 0 .65px $button_color, 0 0 .65px $button_color;
       cursor: pointer;
       transform: scale(1.2);
+      color: $button_color;
     }
   }
 
