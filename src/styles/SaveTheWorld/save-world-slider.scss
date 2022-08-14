@@ -65,7 +65,7 @@
 
       &--active {
         width: 386px;
-        animation: animateBlock 1s ease-in;
+        // animation: animateBlock 1s ease-in;
       }
 
       &--top {
@@ -92,8 +92,15 @@
       transform: translate(-50%, -50%);
       width: 276px;
 
+      &.save-world-slider__item_title--active {
+        animation: titleAnimate 2s ease;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+      }
+
       &--active {
         color: $txt-color-second;
+        opacity: 0;
         top: 40%;
       }
     }
@@ -107,8 +114,11 @@
       line-height: 24px;
       text-align: center;
       color: #1E1A20;
-      opacity: 0.9;
       margin: 0;
+      opacity: 0;
+      animation: descAnimate 2s ease;
+      animation-delay: 1s;
+      animation-fill-mode: forwards;
 
     }
   }
@@ -126,10 +136,34 @@
 
 @keyframes animateTopBlock {
   from {
-    transform: translate(-50%, -50%) scale(1.5);
+    transform: translate(-50%, -50%) scale(1.5) rotate(0deg);
   }
 
   to {
-    transform: translate(-110%, -120%) scale(1);
+    transform: translate(-110%, -120%) scale(1) rotate(360deg);
+  }
+}
+
+@keyframes titleAnimate {
+  from {
+    opacity: 0;
+    transform: translate(-100px, 100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes descAnimate {
+  from {
+    opacity: 0;
+    transform: translate(-100px, 100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
   }
 }
