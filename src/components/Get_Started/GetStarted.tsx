@@ -54,10 +54,10 @@ export const GetStarted = () => {
       <div className="container">
         <div className="get-started__form-and-text">
         <div className="get-started__txt-block">
-          <h3 className="get-started__txt-block_title">
+          <h3 className="get-started__txt-block_title" data-aos="fade-up" data-aos-duration="2000">
             Get started today!
           </h3>
-          <p className="get-started__txt-block_description">
+          <p className="get-started__txt-block_description" data-aos="fade-up" data-aos-duration="2000">
             Learn more about how you can save our planet's nature. From smart consumption to switching to renewable energy, each of us can do our part to save the planet. 
           </p>
         </div>
@@ -100,10 +100,10 @@ export const GetStarted = () => {
         </div>
         <div className="get-started__questions">
           <div className="get-started__contact-block">
-            <h4 className="get-started__contact-block_title">
+            <h4 className="get-started__contact-block_title" data-aos="fade-up" data-aos-duration="2000">
               Ready to Get started?
             </h4>
-            <p className="get-started__contact-block_description">
+            <p className="get-started__contact-block_description" data-aos="fade-up" data-aos-duration="2000">
               When pattern is mentioned in interior design, it is easy to asso- ciate it with a geometric patterned wallpaper or colourful prints on interior fabrics.
             </p>
             <a

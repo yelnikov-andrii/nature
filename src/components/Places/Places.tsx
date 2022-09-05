@@ -9,7 +9,8 @@ export const Places: React.FC = () => {
       id='places'
     >
         <div className="container">
-          <div className="places__top-block">
+          <div className="places__top-block" data-aos="fade-down"
+                data-aos-duration="2000">
 
           <div 
             className="places__top-block_item block-icons"

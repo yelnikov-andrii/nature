@@ -3,6 +3,8 @@ import classNames from 'classnames';
 import logo from '../../images/Logo.svg';
 import natureNeedsYou from '../../images/natureNeedsYou.png';
 import parrot from '../../images/Parrot.png';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export const Header: React.FC = () => {
   const [menuOpenerActive, setMenuOpenerActive] = useState(false);
@@ -44,6 +46,8 @@ export const Header: React.FC = () => {
   }
 
   useEffect(() => {
+    AOS.init()
+    AOS.refresh()
     const timer = setInterval(() => {
       setMembers(prev => prev + generateMembers());
     }, 50000);
@@ -141,9 +145,12 @@ export const Header: React.FC = () => {
                 src={natureNeedsYou}
                 alt='title: nature needs you'
                 className='header__main-info-block_image'
+                data-aos="fade-up"
+                data-aos-duration="2000"
               />
 
-              <p className='header__main-info-block_txt'>
+              <p className='header__main-info-block_txt' data-aos="fade-right"
+                data-aos-duration="2000">
                 The scale of the challenges facing our planet can seem daunting, but we can all do something.
               </p>
 
@@ -172,6 +179,8 @@ export const Header: React.FC = () => {
                 src={parrot}
                 alt='parrot'
                 className='header__main-image-block_img'
+                data-aos="fade-down"
+                data-aos-duration="2000"
               />
               <p className='header__main-image-block_title'>
                 Members

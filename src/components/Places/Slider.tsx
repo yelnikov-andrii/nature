@@ -79,11 +79,11 @@ export const Slider = () => {
               }}
             >
               <div className="slider-block__item_txt">
-                <h2 className='slider-block__item-title'>
+                <h2 className='slider-block__item-title' data-aos="flip-up">
                   {item.title}
                 </h2>
 
-                <p className='slider-block__item-description'>
+                <p className='slider-block__item-description' data-aos="flip-up">
                   {item.description}
                 </p>
               </div>
