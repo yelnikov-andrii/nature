@@ -15,13 +15,16 @@
       height: 17px;
       box-sizing: border-box;
       position: relative;
-      z-index: 1;
+      z-index: 6;
       
       @media (min-width: 768px) {
         display: none;
       }
 
       &.header__list-opener--opened {
+        position: fixed;
+        top: 45px;
+        right: 10px;
 
         .header__list-opener_item {
           &:nth-child(1) {
@@ -101,19 +104,12 @@
     width: 145px;
     height: 48px;
     background: #FFFFFF;
-    box-shadow: 0px 30px 40px rgba(240, 101, 126, 0.05);
-    border-radius: 40px;
-    border: none;
-    outline: none;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: #000;
-    transition: transform 0.4s ease;
 
     @include onSmallScreen {
-      display: none;
+      &.linkToSection {
+        display: none;
+      }
     }
 
     &:hover {
@@ -125,10 +121,9 @@
   }
 
   &__mobile-menu {
-    margin-top: 72px;
     transform: translateX(-100%);
     transition: transform 0.3s;
-    z-index: 1;
+    z-index: 5;
     position: fixed;
     top: 0;
     left: 0;

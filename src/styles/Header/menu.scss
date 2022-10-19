@@ -2,15 +2,16 @@
   &__list {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 50px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     background-color: $header_bg_color;
     width: 100%;
-    height: 90vh;
     color: $header_txt_color;
+    height: 100vh;
+    overflow: hidden;
   }
 
   &__item {
